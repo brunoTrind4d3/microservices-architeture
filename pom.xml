@@ -76,4 +76,17 @@
 <!--			</resources>-->
 <!--	</build>-->
 
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<configuration>
+						<deployAtEnd>true</deployAtEnd>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
 </project>
