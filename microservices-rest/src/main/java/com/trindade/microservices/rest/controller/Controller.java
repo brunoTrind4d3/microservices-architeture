@@ -1,10 +1,9 @@
 package com.trindade.microservices.rest.controller;
 
+import com.trindade.microservices.domain.entity.Person;
 import com.trindade.microservices.domain.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController()
@@ -14,11 +13,10 @@ public class Controller {
     @Autowired
     PersonService service;
 
-    @GetMapping("name")
-    public String getName(){
+    @GetMapping("name/{id}")
+    public Person getName(@PathVariable String id){
         return this.service
-        		.getPerson()
-        		.getName();
+        		.getPersonById(id);
     }
 }
 

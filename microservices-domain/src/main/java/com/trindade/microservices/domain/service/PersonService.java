@@ -2,11 +2,20 @@ package com.trindade.microservices.domain.service;
 
 
 import com.trindade.microservices.domain.entity.Person;
+import com.trindade.microservices.domain.repository.PersonRepository;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public class PersonService {
 
-    public Person getPerson(){
-        return Person.builder().name("Fulano").build();
+    private final PersonRepository repository;
+
+    public Person getPersonById(String id) {
+        return repository.getPersonById(id);
+//        return Person.builder()
+//                .id(id)
+//                .name("Teste de nome")
+//                .build();
     }
 
 }
