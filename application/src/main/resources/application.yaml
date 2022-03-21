@@ -1,0 +1,5 @@
+foo:
+    bar: ${project.version}
+application:
+    name: ${project.name}
+    version: ${project.version}
