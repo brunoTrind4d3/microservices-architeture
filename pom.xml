@@ -25,32 +25,32 @@
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>domain</artifactId>
+			<artifactId>microservices-domain</artifactId>
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>application</artifactId>
+			<artifactId>microservices-application</artifactId>
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>rest</artifactId>
+			<artifactId>microservices-rest</artifactId>
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>repository</artifactId>
+			<artifactId>microservices-repository</artifactId>
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </dependencyManagement>
 
 	<modules>
-		<module>domain</module>
-		<module>repository</module>
-		<module>application</module>
-		<module>rest</module>
+		<module>microservices-domain</module>
+		<module>microservices-repository</module>
+		<module>microservices-application</module>
+		<module>microservices-rest</module>
 	</modules>
 
 <!--	<build>-->

@@ -8,20 +8,20 @@
         <version>0.0.2-SNAPSHOT</version>
     </parent>
 
-    <artifactId>application</artifactId>
+    <artifactId>microservices-application</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>rest</artifactId>
+            <artifactId>microservices-rest</artifactId>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>domain</artifactId>
+            <artifactId>microservices-domain</artifactId>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>repository</artifactId>
+            <artifactId>microservices-repository</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

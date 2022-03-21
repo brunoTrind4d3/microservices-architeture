@@ -1,4 +1,4 @@
-package java;
+package controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,3 +18,4 @@ public class Controller {
         return this.service.getPerson().getName();
     }
 }
+
