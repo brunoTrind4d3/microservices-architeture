@@ -21,7 +21,7 @@ name: deploy
 
 env:
   AZURE_WEBAPP_NAME: web-app-teste    # set this to the name of your Azure Web App
-  JAVA_VERSION: '17'                  # set this to the Java version to use
+  JAVA_VERSION: '11'                  # set this to the Java version to use
 
 on:
   push:
