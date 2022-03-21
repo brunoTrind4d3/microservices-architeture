@@ -1,8 +1,8 @@
 package com.trindade.config;
 
+import com.trindade.microservices.domain.service.PersonService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import service.PersonService;
 
 
 @Configuration

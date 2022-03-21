@@ -1,4 +1,4 @@
-package entity;
+package com.trindade.microservices.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

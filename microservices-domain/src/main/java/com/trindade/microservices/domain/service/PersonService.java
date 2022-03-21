@@ -1,6 +1,7 @@
-package service;
+package com.trindade.microservices.domain.service;
 
-import entity.Person;
+
+import com.trindade.microservices.domain.entity.Person;
 
 public class PersonService {
 
