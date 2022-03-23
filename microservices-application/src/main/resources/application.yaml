@@ -4,6 +4,12 @@ application:
     name: ${project.name}
     version: ${project.version}
 
+keycloak:
+    auth-server-url: http://localhost:8090/
+    realm: microservices
+    resource: user-microservices
+    public-client: true
+
 spring:
     security:
         oauth2:

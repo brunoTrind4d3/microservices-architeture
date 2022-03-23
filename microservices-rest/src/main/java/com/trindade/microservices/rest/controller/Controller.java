@@ -15,7 +15,7 @@ public class Controller {
     PersonService service;
 
     @GetMapping("name/{id}")
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyAuthority('ROLE_USER')")
     public Person getName(@RequestHeader String authorization, @PathVariable String id){
         return this.service
         		.getPersonById(id);
