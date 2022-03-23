@@ -9,10 +9,3 @@ keycloak:
     realm: microservices
     resource: user-microservices
     public-client: true
-
-spring:
-    security:
-        oauth2:
-            resourceserver:
-                jwt:
-                    jwk-set-uri: http://localhost:8090/realms/microservices/protocol/openid-connect/token
