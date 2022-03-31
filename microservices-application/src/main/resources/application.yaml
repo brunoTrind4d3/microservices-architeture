@@ -9,3 +9,6 @@ keycloak:
     realm: microservices
     resource: user-microservices
     public-client: true
+
+
+

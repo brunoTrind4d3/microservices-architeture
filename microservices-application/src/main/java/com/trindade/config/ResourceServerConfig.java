@@ -37,6 +37,8 @@ class ResourceServerConfig extends KeycloakWebSecurityConfigurerAdapter {
                 .hasRole("ADMIN")
                 .antMatchers("/api/v1/open/**")
                 .hasAnyRole("USER", "ADMIN")
+                .antMatchers("/actuator")
+                .permitAll()
                 .anyRequest().authenticated();
     }
 }
