@@ -1,11 +1,24 @@
-foo:
-    bar: ${project.version}
 application:
-    name: ${project.name}
-    version: ${project.version}
+  name: ${project.name}
+  version: ${project.version}
 
-keycloak:
-    auth-server-url: http://localhost:8090/
-    realm: microservices
-    resource: user-microservices
-    public-client: true
+#keycloak:
+#    auth-server-url: http://localhost:8090/
+#    realm: microservices
+#    resource: user-microservices
+#    public-client: true
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/person-control-db
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+      jdbc:
+        lob:
+          non_contextual_creation: true
+
+
+

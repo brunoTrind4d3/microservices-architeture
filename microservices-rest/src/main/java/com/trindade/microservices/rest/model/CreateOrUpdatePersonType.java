@@ -1,24 +1,19 @@
-package com.trindade.microservices.domain.entity;
+package com.trindade.microservices.rest.model;
 
+import com.trindade.microservices.domain.entity.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Person {
-
-    private String id;
+public class CreateOrUpdatePersonType {
     private String name;
     private String taxId;
+    private String birthDate;
     private String email;
-    private Date birthDate;
     private Gender gender;
-    private Boolean active;
-
 }
