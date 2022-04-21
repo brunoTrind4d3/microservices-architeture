@@ -12,8 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.text.ParseException;
 import java.util.List;
 
@@ -26,7 +28,7 @@ public class ApiGatewayController {
     PersonService service;
 
     @PostMapping("/person")
-    public PersonResponse post(@RequestBody CreateOrUpdatePersonType person) {
+    public PersonResponse post(@Valid @RequestBody CreateOrUpdatePersonType person) {
         var entity = PersonMapper.from(person);
         return PersonResponseMapper.from(this.service.save(entity));
     }
@@ -41,7 +43,7 @@ public class ApiGatewayController {
         return PersonResponseMapper.from(this.service.getAll());
     }
 
-    @ExceptionHandler({ParseException.class, PersonAlreadyExistsException.class})
+    @ExceptionHandler({ParseException.class, PersonAlreadyExistsException.class, MethodArgumentNotValidException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<BusinessError> handleBadRequest(Exception ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
